@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx:1.19.7-alpine
+    container_name: explain-nginx
+    depends_on:
+      - api
+      - face
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx.conf.dev:/etc/nginx/nginx.conf
+  api:
+    build:
+      context: api/
+      dockerfile: Dockerfile.dev
+    restart: unless-stopped
+    volumes:
+      - ./api/src:/app/src
+    command: npm run start:dev
+    container_name: explain-api
+    environment: &a1
+      AUTH_LOGIN: thnadz45$%
+      AUTH_PASSWORD: kwcGT09%$#
+  face:
+    build:
+      context: face/
+      dockerfile: Dockerfile.dev
+    restart: unless-stopped
+    volumes:
+      - ./face:/app
+    command: npm run dev
+    container_name: explain-face
+    environment: *a1
