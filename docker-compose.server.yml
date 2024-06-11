@@ -1,18 +1,18 @@
 version: "3.8"
 services:
-  nginx:
+  nginx_r:
     image: nginx:1.19.7-alpine
     container_name: resume-nginx
     depends_on:
-      - face
+      - face_r
     volumes:
-      - ./nginx/nginx.conf.dev:/etc/nginx/nginx.conf
+      - ./nginx_r/nginx.conf.dev:/etc/nginx_r/nginx.conf
     environment:
       VIRTUAL_HOST: andrewkozinsky.ru,www.andrewkozinsky.ru
       LETSENCRYPT_HOST: andrewkozinsky.ru,www.andrewkozinsky.ru
-  face:
+  face_r:
     build:
-      context: face/
+      context: face_r/
       dockerfile: Dockerfile.server
     restart: unless-stopped
     command: npm run start

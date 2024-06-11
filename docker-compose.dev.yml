@@ -1,21 +1,21 @@
 version: "3.8"
 services:
-  nginx:
+  nginx_r:
     image: nginx:1.19.7-alpine
     container_name: resume-nginx
     depends_on:
-      - face
+      - face_r
     ports:
       - 80:80
     volumes:
-      - ./nginx/nginx.conf.dev:/etc/nginx/nginx.conf
-  face:
+      - ./nginx_r/nginx.conf.dev:/etc/nginx_r/nginx.conf
+  face_r:
     build:
-      context: face/
+      context: face_r/
       dockerfile: Dockerfile.dev
     restart: unless-stopped
     volumes:
-      - ./face/src:/app/src
+      - ./face_r/src:/app/src
     command: npm run dev
     container_name: resume-face
     environment: {}

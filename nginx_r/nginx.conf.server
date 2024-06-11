@@ -9,7 +9,7 @@ http {
         server_name andrewkozinsky.ru www.andrewkozinsky.ru;
 
         location / {
-            proxy_pass http://face:3000;
+            proxy_pass http://face_r:3000;
         }
 
         location /nginx-test {

@@ -14,12 +14,12 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 		version: '3.8',
 
 		services: {
-			nginx: {
+			nginx_r: {
 				image: 'nginx:1.19.7-alpine',
 				container_name: 'resume-nginx',
-				depends_on: ['face'],
+				depends_on: ['face_r'],
 				ports: env === 'server' ? undefined : ['80:80'],
-				volumes: ['./nginx/nginx.conf.dev:/etc/nginx/nginx.conf'],
+				volumes: ['./nginx_r/nginx.conf.dev:/etc/nginx_r/nginx.conf'],
 				environment:
 					env === 'server'
 						? {
@@ -28,13 +28,13 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 							}
 						: undefined,
 			},
-			face: {
+			face_r: {
 				build: {
-					context: 'face/',
+					context: 'face_r/',
 					dockerfile: env === 'dev' ? 'Dockerfile.dev' : 'Dockerfile.server',
 				},
 				restart: 'unless-stopped',
-				volumes: env === 'dev' ? ['./face/src:/app/src'] : undefined,
+				volumes: env === 'dev' ? ['./face_r/src:/app/src'] : undefined,
 				command: env === 'dev' ? 'npm run dev' : 'npm run start',
 				container_name: 'resume-face',
 				environment: commonEnvVars,
