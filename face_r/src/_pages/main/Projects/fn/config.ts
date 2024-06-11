@@ -16,7 +16,7 @@ export const projectsConfig: ProjectsConfig = [
 			'Объеснение принципа работы: youtube.com/watch?v=2SB0DEwHLqg',
 			'Не стал продолжать потому что это нет ни времени, ни денег.',
 		],
-		technologies: ['Реакте', 'Ноде', 'Нексте', 'Несте', 'Докере'],
+		technologies: ['React', 'Node', 'Next', 'Nest', 'Docker'],
 	},
 	{
 		name: 'explainit.ru',
@@ -40,6 +40,6 @@ export const projectsConfig: ProjectsConfig = [
 		description: [
 			'Взаимодействие с блогами, заметками, комментариями, пользователями, авторизациями.',
 		],
-		technologies: ['NestJs', 'Postgres', '', ''],
+		technologies: ['Nest', 'Postgres'],
 	},
 ]

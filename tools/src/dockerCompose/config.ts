@@ -34,7 +34,10 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 					dockerfile: env === 'dev' ? 'Dockerfile.dev' : 'Dockerfile.server',
 				},
 				restart: 'unless-stopped',
-				volumes: env === 'dev' ? ['./face_r/src:/app/src'] : undefined,
+				volumes:
+					env === 'dev'
+						? ['./face_r/src:/app/src', './face_r/public:/app/public']
+						: undefined,
 				command: env === 'dev' ? 'npm run dev' : 'npm run start',
 				container_name: 'resume-face',
 				environment: commonEnvVars,

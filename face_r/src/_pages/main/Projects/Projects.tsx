@@ -6,7 +6,7 @@ import './Projects.scss'
 function Projects() {
 	return (
 		<div>
-			<Header text="Проекты" />
+			<Header text="Собственные проекты" />
 			<div className="projects">
 				{projectsConfig.map((configItem) => {
 					return <ExperienceItem configItem={configItem} />
