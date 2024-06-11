@@ -1,12 +1,17 @@
 import React from 'react'
+import Header from '../common/Header/Header'
 import { ToolConfig, toolsConfig } from './fn/config'
+import './Tools.scss'
 
 function Tools() {
 	return (
 		<div>
-			{toolsConfig.map((configItem) => {
-				return <Tool configItem={configItem} />
-			})}
+			<Header text="Инстурменты" />
+			<div className="tools">
+				{toolsConfig.map((configItem) => {
+					return <Tool configItem={configItem} />
+				})}
+			</div>
 		</div>
 	)
 }
@@ -21,9 +26,9 @@ function Tool(props: ToolProps) {
 	const { configItem } = props
 
 	return (
-		<div>
-			<p>{configItem.toolName}</p>
-			<div>
+		<div className="tools__item">
+			<p className="tools__item-name">{configItem.toolName}</p>
+			<div className="tools__item-description">
 				{configItem.description.map((text) => {
 					return <p>{text}</p>
 				})}

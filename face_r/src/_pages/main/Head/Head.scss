@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.head {
+	display: flex;
+}
+
+.head__left-site {
+	width: $leftCell;
+}
+
+.head__right-site {
+}
+
+.head__position {
+	font-weight: 600;
+}
+
+.head__name {
+	font-size: 3rem;
+	line-height: 3.8rem;
+	font-weight: 600;
+	margin-top: .4rem;
+}
+
+.head__level {
+	margin-top: .4rem;
+}
