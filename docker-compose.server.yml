@@ -1,12 +1,12 @@
 version: "3.8"
 services:
-  nginx_r:
+  nginx:
     image: nginx:1.19.7-alpine
     container_name: resume-nginx
     depends_on:
       - face_r
     volumes:
-      - ./nginx_r/nginx.conf.dev:/etc/nginx_r/nginx.conf
+      - ./nginx/nginx.conf.dev:/etc/nginx/nginx.conf
     environment:
       VIRTUAL_HOST: andrewkozinsky.ru,www.andrewkozinsky.ru
       LETSENCRYPT_HOST: andrewkozinsky.ru,www.andrewkozinsky.ru

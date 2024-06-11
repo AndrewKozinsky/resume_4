@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  nginx_r:
+  nginx:
     image: nginx:1.19.7-alpine
     container_name: resume-nginx
     depends_on:
@@ -8,7 +8,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./nginx_r/nginx.conf.dev:/etc/nginx_r/nginx.conf
+      - ./nginx/nginx.conf.dev:/etc/nginx/nginx.conf
   face_r:
     build:
       context: face_r/

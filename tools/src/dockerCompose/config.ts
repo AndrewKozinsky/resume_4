@@ -14,12 +14,12 @@ export function createDockerConfig(env: 'dev' | 'serverCheck' | 'server'): Confi
 		version: '3.8',
 
 		services: {
-			nginx_r: {
+			nginx: {
 				image: 'nginx:1.19.7-alpine',
 				container_name: 'resume-nginx',
 				depends_on: ['face_r'],
 				ports: env === 'server' ? undefined : ['80:80'],
-				volumes: ['./nginx_r/nginx.conf.dev:/etc/nginx_r/nginx.conf'],
+				volumes: ['./nginx/nginx.conf.dev:/etc/nginx/nginx.conf'],
 				environment:
 					env === 'server'
 						? {
