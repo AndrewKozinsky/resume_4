@@ -6,7 +6,7 @@ import './Tools.scss'
 function Tools() {
 	return (
 		<div>
-			<Header text="Инстурменты" />
+			<Header tag="h2">Инструменты</Header>
 			<div className="tools">
 				{toolsConfig.map((configItem) => {
 					return <Tool configItem={configItem} />
@@ -26,12 +26,16 @@ function Tool(props: ToolProps) {
 	const { configItem } = props
 
 	return (
-		<div className="tools__item">
-			<p className="tools__item-name">{configItem.toolName}</p>
-			<div className="tools__item-description">
-				{configItem.description.map((text) => {
-					return <p>{text}</p>
-				})}
+		<div className="tool">
+			<div className="tool__left-part">
+				<Header tag="h3">{configItem.toolName}</Header>
+			</div>
+			<div className="tool__right-part">
+				<div className="tool__description">
+					{configItem.description.map((text) => {
+						return <p>{text}</p>
+					})}
+				</div>
 			</div>
 		</div>
 	)

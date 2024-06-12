@@ -1,14 +1,19 @@
 import React from 'react'
+import cn from 'classnames'
 import './Header.scss'
 
 type HeaderProps = {
-	text: string
+	children: string
+	tag: 'h2' | 'h3'
 }
 
 function Header(props: HeaderProps) {
-	const { text } = props
+	const { tag, children } = props
 
-	return <h2 className="header">{text}</h2>
+	const Tag = tag
+
+	return <Tag className={cn('header', 'header--' + tag)}>{children}</Tag>
+	// return <Tag>555</Tag>
 }
 
 export default Header

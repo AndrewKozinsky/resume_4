@@ -7,7 +7,7 @@ import './Projects.scss'
 function Projects() {
 	return (
 		<div>
-			<Header text="Собственные проекты" />
+			<Header tag="h2">Собственные проекты</Header>
 			<div className="projects">
 				{projectsConfig.map((configItem) => {
 					return <ExperienceItem configItem={configItem} />
@@ -28,7 +28,7 @@ function ExperienceItem(props: ExperienceItemProps) {
 
 	return (
 		<div className="project">
-			<p className="project__name">{configItem.name}</p>
+			<Header tag="h3">{configItem.name}</Header>
 			{configItem.github && (
 				<p className="project__site">
 					<a href={'https://' + configItem.github} className="link">

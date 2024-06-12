@@ -7,11 +7,11 @@ export type ToolsConfig = ToolConfig[]
 
 export const toolsConfig: ToolsConfig = [
 	{
-		toolName: 'TYPESCRIPT',
+		toolName: 'TypeScript',
 		description: ['Использую 4 года. Ранее несколько лет JavaScript.'],
 	},
 	{
-		toolName: 'REACT и NEXT',
+		toolName: 'React и Next',
 		description: [
 			'Реакт и сопутствующие технологии 3 года коммерческого и 5 лет использования.',
 			'Next, 8 месяцев коммерческого использования и для своих проектов.',
@@ -26,25 +26,25 @@ export const toolsConfig: ToolsConfig = [
 		],
 	},
 	{
-		toolName: 'NODEJS и NEST',
+		toolName: 'NodeJS и Nest',
 		description: [
 			'Самостоятельно изучал, но затем понял, что нет понимания фундаментальных знаний. Поэтому пошёл на https://it-incubator.io/education/back-end. Сейчас на 6-ом месяце. Изученные темы: Express, MongoDB, JWT и авторизация, отправка электронных писем, Refresh и Access Token, Mongoose, Nest, Postgres, TypeORM.',
 		],
 	},
 	{
-		toolName: 'ТЕСТЫ',
+		toolName: 'Тесты',
 		description: [
 			'Писал e2e и модульные тесты. В основном на API. Есть опыт тестирования клиентских компонентов.',
 		],
 	},
 	{
-		toolName: 'ВЁРСТКА',
+		toolName: 'Вёрстка',
 		description: [
 			'На протяжении 5 лет проектировал UI и внешний вид классических сайтов. Figma/Sketch/Photoshop. Делал адаптивную вёрстку HTML, CSS.',
 		],
 	},
 	{
-		toolName: 'ДРУГОЕ',
+		toolName: 'Другое',
 		description: [
 			'Git на уровне склонировать, сделать коммит, обновить, слить. Работал по git-flow.',
 			'Терминал знаю на уровне поставить пакет из NPM, запуск основных команд NPM и Докера.',

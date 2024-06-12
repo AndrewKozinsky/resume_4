@@ -7,7 +7,7 @@ import './Experience.scss'
 function Experience() {
 	return (
 		<div>
-			<Header text="Опыт работы" />
+			<Header tag="h2">Опыт работы</Header>
 			<div className="experience">
 				<div className="experience__items">
 					{experienceConfig.toReversed().map((configItem) => {
