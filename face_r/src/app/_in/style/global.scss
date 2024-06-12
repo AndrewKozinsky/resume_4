@@ -14,6 +14,10 @@
 	display: revert;
     list-style: none;
 
+	strong, b {
+		font-weight: 600;
+	}
+
 	&:focus {
 		outline: 2px solid $blueColor-2;
 	}

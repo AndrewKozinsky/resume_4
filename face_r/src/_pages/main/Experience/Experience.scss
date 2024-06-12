@@ -43,6 +43,7 @@
 }
 
 .experience__company-site {
+	position: relative;
 	margin-top: 0.4rem;
 }
 
@@ -64,14 +65,6 @@
 	display: flex;
 	gap: 1rem;
 	margin-top: 1.2rem;
-}
-
-.experience__technology {
-	display: inline-block;
-	font-weight: 500;
-	background-color: $grayColor-1;
-	padding: .1rem 0.6rem;
-	border-radius: $radius-1;
 }
 
 .experience__note {

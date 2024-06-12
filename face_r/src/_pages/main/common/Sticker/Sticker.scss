@@ -1,0 +1,10 @@
+@import '../../../../styles/variables.scss';
+
+.sticker {
+	display: inline-block;
+	color: $blueColor-2;
+	font-weight: 500;
+	background-color: $blueColor-1;
+	padding: .1rem 0.6rem;
+	border-radius: $radius-1;
+}

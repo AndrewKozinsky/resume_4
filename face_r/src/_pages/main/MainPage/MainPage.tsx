@@ -1,6 +1,7 @@
 import React from 'react'
 import Contacts from '../Contacts/Contacts'
 import Experience from '../Experience/Experience'
+import Footer from '../Footer/Footer'
 import Head from '../Head/Head'
 import Projects from '../Projects/Projects'
 import Tools from '../Tools/Tools'
@@ -14,6 +15,7 @@ function MainPage() {
 			<Tools />
 			<Projects />
 			<Contacts />
+			<Footer />
 		</div>
 	)
 }

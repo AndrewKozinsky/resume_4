@@ -25,3 +25,12 @@
 		border-bottom-color: rgba($orangeColor-2, .35);
 	}*/
 }
+
+.outer-site-sign {
+	display: inline-block;
+	width: 0.7em;
+	height: 0.7em;
+	background-image: url("/images/outer-site-sign.svg");
+	background-size: 100% 100%;
+	margin-left: .3em;
+}

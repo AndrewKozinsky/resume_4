@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../common/Header/Header'
+import Sticker from '../common/Sticker/Sticker'
 import { projectsConfig, ProjectConfig } from './fn/config'
 import './Projects.scss'
 
@@ -45,7 +46,7 @@ function ExperienceItem(props: ExperienceItemProps) {
 			)}
 			<div className="project__technologies">
 				{configItem.technologies.map((item) => {
-					return <p className="project__technology">{item}</p>
+					return <Sticker>{item}</Sticker>
 				})}
 			</div>
 		</div>

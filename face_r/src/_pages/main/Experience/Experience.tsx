@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../common/Header/Header'
+import Sticker from '../common/Sticker/Sticker'
 import { experienceConfig, ExperienceConfigItem } from './fn/config'
 import './Experience.scss'
 
@@ -46,6 +47,7 @@ function ExperienceItem(props: ExperienceItemProps) {
 				<p className="experience__company-site">
 					<a href={'https://' + configItem.companySite} className="link">
 						{configItem.companySite}
+						<span className="outer-site-sign" />
 					</a>
 				</p>
 				<p className="experience__position">{configItem.position}</p>
@@ -56,7 +58,7 @@ function ExperienceItem(props: ExperienceItemProps) {
 				</div>
 				<div className="experience__technologies">
 					{configItem.technologies.map((item) => {
-						return <span className="experience__technology">{item}</span>
+						return <Sticker>{item}</Sticker>
 					})}
 				</div>
 			</div>
