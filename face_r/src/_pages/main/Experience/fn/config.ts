@@ -7,6 +7,7 @@ export type ExperienceConfigItem = {
 	position: string
 	description: string[]
 	technologies: string[]
+	achievements?: string[]
 }
 
 export type ExperienceItems = ExperienceConfigItem[]
@@ -48,6 +49,7 @@ export const experienceConfig: ExperienceItems = [
 			'Я закончил сотрудничество потому что хотелось полноценно писать сложные приложения на Реакте. А в этой компании таких задач не было.',
 		],
 		technologies: ['HTML', 'CSS', 'Javascript'],
+		achievements: ['Предлагал множество идей для увеличения конверсии сайта.'],
 	},
 	{
 		startDate: 'Октябрь 2020',
@@ -62,6 +64,7 @@ export const experienceConfig: ExperienceItems = [
 			'Я принял решение об уходе потому что понял, что проект мне не близок.',
 		],
 		technologies: ['React', 'Redux', 'SCSS'],
+		achievements: ['Продавил внедрение TypeScript-а для увеличения надёжности кода.'],
 	},
 	{
 		startDate: 'Ноябрь 2021',
@@ -75,6 +78,7 @@ export const experienceConfig: ExperienceItems = [
 			'Компания отказалась от проверки гипотез и перешли на другие инструменты где не требуется программирование.',
 		],
 		technologies: ['React', 'Next', 'Redux'],
+		achievements: ['Предлагал гипотезы для улучшения продукта'],
 	},
 	{
 		startDate: 'Сентябрь 2022',
@@ -90,5 +94,10 @@ export const experienceConfig: ExperienceItems = [
 			'Руководитель решил остановить активную разработку потому что работающего функциона было достаточно для запуска.',
 		],
 		technologies: ['TypeScript', 'React 18', 'Zustand', 'XState', 'React Query', 'Axios'],
+		achievements: [
+			'Перевёл проект на другую систему управления состоянием чтобы уменьшить сложность и сократить время написания кода.',
+			'Написал шаблонный компонент формы чтобы упростить переиспользование логики и уменьшить время написания других форм.',
+			'Когда потребовалась реализовать сложную логику изучил XState.',
+		],
 	},
 ]

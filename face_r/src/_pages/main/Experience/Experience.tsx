@@ -57,10 +57,21 @@ function ExperienceItem(props: ExperienceItemProps) {
 					})}
 				</div>
 				<div className="experience__technologies">
-					{configItem.technologies.map((item) => {
-						return <Sticker>{item}</Sticker>
+					{configItem.technologies.map((technology) => {
+						return <Sticker>{technology}</Sticker>
 					})}
 				</div>
+
+				{configItem.achievements && (
+					<div className="experience__achievements">
+						<h4 className="experience__achievements-header">Достижения</h4>
+						<ul className="experience__achievements-list">
+							{configItem.achievements.map((achievement) => {
+								return <li className="experience__achievement">{achievement}</li>
+							})}
+						</ul>
+					</div>
+				)}
 			</div>
 		</div>
 	)

@@ -73,3 +73,28 @@
 	margin-top: 2rem;
 	border-radius: $radius-1;
 }
+
+.experience__achievements {
+	margin-top: 1.6rem;
+}
+
+.experience__achievements-header {
+	font-size: 1.4rem;
+	line-height: 2rem;
+	color: $grayColor-4;
+	font-weight: 600;
+}
+
+.experience__achievements-list {
+	display: flex;
+	flex-direction: column;
+	gap: .2rem;
+	padding-left: 2.6rem;
+	margin-top: .2rem;
+}
+
+.experience__achievement {
+	font-size: 1.4rem;
+	line-height: 2rem;
+	list-style: disc;
+}
