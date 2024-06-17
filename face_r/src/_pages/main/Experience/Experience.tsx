@@ -1,24 +1,28 @@
 import React from 'react'
+import { LangType } from '../../../config/config'
 import Header from '../common/Header/Header'
 import Sticker from '../common/Sticker/Sticker'
 import { experienceConfig, ExperienceConfigItem } from './fn/config'
+import { metaConfig } from './fn/metaConfig'
 import './Experience.scss'
 
-function Experience() {
+type ExperienceProps = {
+	lang: LangType
+}
+
+function Experience(props: ExperienceProps) {
+	const { lang } = props
+
 	return (
 		<div>
-			<Header tag="h2">Опыт работы</Header>
+			<Header tag="h2">{metaConfig.sectionHeader[lang]}</Header>
 			<div className="experience">
 				<div className="experience__items">
 					{experienceConfig.toReversed().map((configItem) => {
-						return <ExperienceItem configItem={configItem} />
+						return <ExperienceItem configItem={configItem} lang={lang} />
 					})}
 				</div>
-				<p className="experience__note">
-					Мне интересно стать разработчиком полного цикла, поэтому с декабря 2023 проходил
-					обучении в it-incubator.io/education/back-end. Поэтому поисками работы не
-					занимался.
-				</p>
+				<p className="experience__note">{metaConfig.sectionNote[lang]}</p>
 			</div>
 		</div>
 	)
@@ -28,31 +32,32 @@ export default Experience
 
 type ExperienceItemProps = {
 	configItem: ExperienceConfigItem
+	lang: LangType
 }
 
 function ExperienceItem(props: ExperienceItemProps) {
-	const { configItem } = props
+	const { configItem, lang } = props
 
 	return (
 		<div className="experience__item">
 			<div className="experience__item-left">
 				<p className="experience__time">
-					<span>{configItem.startDate}</span>
-					<span>{configItem.endDate}</span>
+					<span>{configItem.startDate[lang]}</span>
+					<span>{configItem.endDate[lang]}</span>
 				</p>
-				<p className="experience__duration">{configItem.duration}</p>
+				<p className="experience__duration">{configItem.duration[lang]}</p>
 			</div>
 			<div className="experience__item-content">
-				<p className="experience__company-name">{configItem.companyName}</p>
+				<p className="experience__company-name">{configItem.companyName[lang]}</p>
 				<p className="experience__company-site">
 					<a href={'https://' + configItem.companySite} className="link">
 						{configItem.companySite}
 						<span className="outer-site-sign" />
 					</a>
 				</p>
-				<p className="experience__position">{configItem.position}</p>
+				<p className="experience__position">{configItem.position[lang]}</p>
 				<div className="experience__description">
-					{configItem.description.map((item) => {
+					{configItem.description[lang].map((item) => {
 						return <p>{item}</p>
 					})}
 				</div>
@@ -64,9 +69,11 @@ function ExperienceItem(props: ExperienceItemProps) {
 
 				{configItem.achievements && (
 					<div className="experience__achievements">
-						<h4 className="experience__achievements-header">Достижения</h4>
+						<h4 className="experience__achievements-header">
+							{metaConfig.achievementsSubheader[lang]}
+						</h4>
 						<ul className="experience__achievements-list">
-							{configItem.achievements.map((achievement) => {
+							{configItem.achievements[lang].map((achievement) => {
 								return <li className="experience__achievement">{achievement}</li>
 							})}
 						</ul>

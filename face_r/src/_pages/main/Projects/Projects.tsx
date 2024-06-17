@@ -1,16 +1,24 @@
 import React from 'react'
+import { LangType } from '../../../config/config'
 import Header from '../common/Header/Header'
 import Sticker from '../common/Sticker/Sticker'
 import { projectsConfig, ProjectConfig } from './fn/config'
 import './Projects.scss'
+import { metaConfig } from './fn/metaConfig'
 
-function Projects() {
+type ProjectsProps = {
+	lang: LangType
+}
+
+function Projects(props: ProjectsProps) {
+	const { lang } = props
+
 	return (
 		<div>
-			<Header tag="h2">Собственные проекты</Header>
+			<Header tag="h2">{metaConfig.sectionHeader[lang]}</Header>
 			<div className="projects">
 				{projectsConfig.map((configItem) => {
-					return <ExperienceItem configItem={configItem} />
+					return <ExperienceItem lang={lang} configItem={configItem} />
 				})}
 			</div>
 		</div>
@@ -20,15 +28,16 @@ function Projects() {
 export default Projects
 
 type ExperienceItemProps = {
+	lang: LangType
 	configItem: ProjectConfig
 }
 
 function ExperienceItem(props: ExperienceItemProps) {
-	const { configItem } = props
+	const { lang, configItem } = props
 
 	return (
 		<div className="project">
-			<Header tag="h3">{configItem.name}</Header>
+			<Header tag="h3">{configItem.name[lang]}</Header>
 			{configItem.github && (
 				<p className="project__site">
 					<a href={'https://' + configItem.github} className="link">
@@ -39,7 +48,7 @@ function ExperienceItem(props: ExperienceItemProps) {
 
 			{configItem.description && (
 				<div className="project__description">
-					{configItem.description.map((item) => {
+					{configItem.description[lang].map((item) => {
 						return <p>{item}</p>
 					})}
 				</div>

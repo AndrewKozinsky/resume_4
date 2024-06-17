@@ -1,15 +1,23 @@
 import React from 'react'
+import { LangType } from '../../../config/config'
 import Header from '../common/Header/Header'
+import { metaConfig } from './fn/metaConfig'
 import './Contacts.scss'
 
-function Contacts() {
+type ContactsProps = {
+	lang: LangType
+}
+
+function Contacts(props: ContactsProps) {
+	const { lang } = props
+
 	return (
 		<div>
-			<Header tag="h2">Контакты</Header>
+			<Header tag="h2">{metaConfig.sectionHeader[lang]}</Header>
 			<div className="contacts">
-				<p>andkozinsky@gmail.com</p>
-				<p>8 (919) 842-35-99</p>
-				<p>Telegram: @AndrewKozinsky</p>
+				<p>{metaConfig.email[lang]}</p>
+				<p>{metaConfig.phone[lang]}</p>
+				<p>{metaConfig.telegram[lang]}</p>
 			</div>
 		</div>
 	)
