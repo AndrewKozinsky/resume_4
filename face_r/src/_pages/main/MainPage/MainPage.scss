@@ -1,8 +1,25 @@
+@import '../../../styles/variables.scss';
+
 .page-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+	padding: 0 3%;
+	margin: 5rem auto 5rem 0;
+
+	@include page-width($monitor-width) {
+		flex-direction: row;
+	}
+}
+
+.page-part {
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
 	max-width: 120rem;
-	padding: 0 3%;
-	margin: 5rem auto 5rem 0;
+	container-type: inline-size;
+
+	@include page-width($monitor-width) {
+		width: 50%;
+	}
 }

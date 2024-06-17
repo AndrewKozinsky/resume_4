@@ -12,18 +12,31 @@
 
 .experience__item {
 	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+
+	@include container-width($tablet-width) {
+		flex-direction: row;
+		gap: $sectionsGapWidth;
+	}
 }
 
 .experience__item-left {
-	width: $leftCell;
+	@include container-width($tablet-width) {
+		width: $leftCell;
+	}
 }
 
 .experience__time {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: .2rem;
 	font-size: 1.4rem;
 	font-weight: 500;
+
+	@include container-width($tablet-width) {
+		flex-direction: column;
+	}
 }
 
 .experience__duration {
@@ -64,6 +77,7 @@
 .experience__technologies {
 	display: flex;
 	gap: 1rem;
+	flex-wrap: wrap;
 	margin-top: 1.2rem;
 }
 

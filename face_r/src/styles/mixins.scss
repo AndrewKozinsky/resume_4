@@ -1,16 +1,16 @@
 // Медиа-выражение для задания минимальной ширины браузера по которым будет показываться заданный стиль
 @mixin page-width($minWidth) {
-    @media (min-width: $minWidth) {
+    @media (min-width: #{$minWidth}) {
         @content;
     }
 }
 
 // Выражение для задания минимальной ширины контейнера по которым будет показываться заданный стиль
-/*@mixin container-width($minWidth) {
-    @container (min-width: $minWidth) {
+@mixin container-width($minWidth) {
+    @container (min-width: #{$minWidth}) {
         @content;
     }
-}*/
+}
 
 // Задаёт тень при наведение на элемент
 /*@mixin hover-shadow() {

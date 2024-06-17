@@ -8,13 +8,23 @@
 
 .tool {
 	display: flex;
+	flex-direction: column;
+	gap: .4rem;
+
+	@include container-width($tablet-width) {
+		flex-direction: row;
+		gap: $sectionsGapWidth;
+	}
 }
 
 .tool__left-part {
-	width: $leftCell;
 	flex-shrink: 0;
 	box-sizing: border-box;
 	padding-right: 1rem;
+
+	@include container-width($tablet-width) {
+		width: $leftCell;
+	}
 }
 
 .tool__right-part {

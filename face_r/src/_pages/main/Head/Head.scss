@@ -2,10 +2,20 @@
 
 .head {
 	display: flex;
+	flex-direction: column;
+	gap: $sectionsGapWidth;
+
+	@include container-width($tablet-width) {
+		flex-direction: row;
+	}
 }
 
+
+
 .head__left-site {
-	width: $leftCell;
+	@include container-width($tablet-width) {
+		width: $leftCell;
+	}
 }
 
 .head__author-photo {

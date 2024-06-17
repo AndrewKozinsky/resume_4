@@ -10,12 +10,22 @@ import './MainPage.scss'
 function MainPage() {
 	return (
 		<div className="page-wrapper">
-			<Head />
-			<Experience />
-			<Tools />
-			<Projects />
-			<Contacts />
-			<Footer />
+			<div className="page-part">
+				<Head />
+				<Experience />
+				<Tools />
+				<Projects />
+				<Contacts />
+				<Footer />
+			</div>
+			<div className="page-part">
+				<Head />
+				<Experience />
+				<Tools />
+				<Projects />
+				<Contacts />
+				<Footer />
+			</div>
 		</div>
 	)
 }
