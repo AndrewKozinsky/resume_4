@@ -60,7 +60,7 @@ export const projectsConfig: ProjectsConfig = [
 	{
 		name: {
 			rus: 'Обработчик форм',
-			eng: 'Form handler',
+			eng: 'A form handler',
 		},
 		github: 'github.com/AndrewKozinsky/modern-react-form',
 		technologies: ['React'],
