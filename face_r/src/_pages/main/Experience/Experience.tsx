@@ -1,6 +1,8 @@
 import React from 'react'
 import { LangType } from '../../../config/config'
 import Header from '../common/Header/Header'
+import Paragraph from '../common/Paragraph/Paragraph'
+import ParagraphsContainer from '../common/ParagraphsContainer/ParagraphsContainer'
 import Sticker from '../common/Sticker/Sticker'
 import { experienceConfig, ExperienceConfigItem } from './fn/config'
 import { metaConfig } from './fn/metaConfig'
@@ -22,7 +24,6 @@ function Experience(props: ExperienceProps) {
 						return <ExperienceItem configItem={configItem} lang={lang} />
 					})}
 				</div>
-				<p className="experience__note">{metaConfig.sectionNote[lang]}</p>
 			</div>
 		</div>
 	)
@@ -56,11 +57,11 @@ function ExperienceItem(props: ExperienceItemProps) {
 					</a>
 				</p>
 				<p className="experience__position">{configItem.position[lang]}</p>
-				<div className="experience__description">
+				<ParagraphsContainer>
 					{configItem.description[lang].map((item) => {
-						return <p>{item}</p>
+						return <Paragraph>{item}</Paragraph>
 					})}
-				</div>
+				</ParagraphsContainer>
 				<div className="experience__technologies">
 					{configItem.technologies.map((technology) => {
 						return <Sticker>{technology}</Sticker>

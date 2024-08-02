@@ -65,13 +65,7 @@
 	line-height: 2.8rem;
 	font-weight: 500;
 	margin-top: 0.6rem;
-}
-
-.experience__description {
-	display: flex;
-	flex-direction: column;
-	gap: .8rem;
-	margin-top: 1rem;
+	margin-bottom: 0.6rem;
 }
 
 .experience__technologies {
@@ -79,13 +73,6 @@
 	gap: 1rem;
 	flex-wrap: wrap;
 	margin-top: 1.2rem;
-}
-
-.experience__note {
-	background-color: $grayColor-1;
-	padding: 1rem 1.6rem;
-	margin-top: 2rem;
-	border-radius: $radius-1;
 }
 
 .experience__achievements {

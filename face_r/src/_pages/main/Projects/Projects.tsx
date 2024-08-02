@@ -1,6 +1,8 @@
 import React from 'react'
 import { LangType } from '../../../config/config'
 import Header from '../common/Header/Header'
+import Paragraph from '../common/Paragraph/Paragraph'
+import ParagraphsContainer from '../common/ParagraphsContainer/ParagraphsContainer'
 import Sticker from '../common/Sticker/Sticker'
 import { projectsConfig, ProjectConfig } from './fn/config'
 import './Projects.scss'
@@ -47,11 +49,11 @@ function ExperienceItem(props: ExperienceItemProps) {
 			)}
 
 			{configItem.description && (
-				<div className="project__description">
+				<ParagraphsContainer>
 					{configItem.description[lang].map((item) => {
-						return <p>{item}</p>
+						return <Paragraph>{item}</Paragraph>
 					})}
-				</div>
+				</ParagraphsContainer>
 			)}
 			<div className="project__technologies">
 				{configItem.technologies.map((item) => {

@@ -252,4 +252,33 @@ export const experienceConfig: ExperienceItems = [
 			],
 		},
 	},
+	{
+		startDate: {
+			rus: 'Декабрь 2023',
+			eng: 'December 2023',
+		},
+		endDate: {
+			rus: 'Настоящее время',
+			eng: 'Present time',
+		},
+		duration: {
+			rus: '9 месяцев',
+			eng: '9 months',
+		},
+		companyName: {
+			rus: 'It-Инкубатор',
+			eng: 'It-incubator',
+		},
+		companySite: 'it-incubator.io/education/back-end',
+		position: { rus: 'Ученик', eng: 'A student' },
+		description: {
+			rus: [
+				'Мне интересно стать разработчиком полного цикла, поэтому с декабря 2023 прохожу обучение. Поэтому поисками работы не занимался. Мне осталось ещё 2 месяца. Это не помешает работе.',
+			],
+			eng: [
+				"I'm interested in becoming a full time developer, so I'm in training from December 2023. So I haven't been looking for a job. I have two more months to go. It won't interfere with work.",
+			],
+		},
+		technologies: ['TypeScript', 'Node', 'Express', 'Nest', 'Mongo', 'Postgres', 'TypeORM'],
+	},
 ]

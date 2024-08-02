@@ -1,6 +1,8 @@
 import React from 'react'
 import { LangType } from '../../../config/config'
 import Header from '../common/Header/Header'
+import Paragraph from '../common/Paragraph/Paragraph'
+import ParagraphsContainer from '../common/ParagraphsContainer/ParagraphsContainer'
 import { ToolConfig, toolsConfig } from './fn/config'
 import { metaConfig } from './fn/metaConfig'
 import './Tools.scss'
@@ -40,11 +42,11 @@ function Tool(props: ToolProps) {
 				<Header tag="h3">{configItem.toolName[lang]}</Header>
 			</div>
 			<div className="tool__right-part">
-				<div className="tool__description">
-					{configItem.description[lang].map((text) => {
-						return <p>{text}</p>
+				<ParagraphsContainer>
+					{configItem.description[lang].map((item) => {
+						return <Paragraph>{item}</Paragraph>
 					})}
-				</div>
+				</ParagraphsContainer>
 			</div>
 		</div>
 	)

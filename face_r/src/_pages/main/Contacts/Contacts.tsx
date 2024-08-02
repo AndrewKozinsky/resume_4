@@ -1,6 +1,8 @@
 import React from 'react'
 import { LangType } from '../../../config/config'
 import Header from '../common/Header/Header'
+import Paragraph from '../common/Paragraph/Paragraph'
+import ParagraphsContainer from '../common/ParagraphsContainer/ParagraphsContainer'
 import { metaConfig } from './fn/metaConfig'
 import './Contacts.scss'
 
@@ -14,11 +16,11 @@ function Contacts(props: ContactsProps) {
 	return (
 		<div>
 			<Header tag="h2">{metaConfig.sectionHeader[lang]}</Header>
-			<div className="contacts">
-				<p>{metaConfig.email[lang]}</p>
-				<p>{metaConfig.phone[lang]}</p>
-				<p>{metaConfig.telegram[lang]}</p>
-			</div>
+			<ParagraphsContainer>
+				<Paragraph>{metaConfig.email[lang]}</Paragraph>
+				<Paragraph>{metaConfig.phone[lang]}</Paragraph>
+				<Paragraph>{metaConfig.telegram[lang]}</Paragraph>
+			</ParagraphsContainer>
 		</div>
 	)
 }
