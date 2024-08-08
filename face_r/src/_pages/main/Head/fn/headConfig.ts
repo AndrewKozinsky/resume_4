@@ -32,8 +32,8 @@ export const headConfig = {
 		eng: 'Salary:',
 	},
 	salaryValue: {
-		rus: '150 000 руб.',
-		eng: '1700 $',
+		rus: '160 000 руб.',
+		eng: '1800 $',
 	},
 	movementStatus: {
 		rus: 'Не готов к переезду',
